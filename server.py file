@@ -1,0 +1,29 @@
+Error 1
+ImportError: cannot import name 'izip' from 'itertools' 
+If you're runnning the file in python3, you don't need to import
+Also,within your code, change izip to zip() and that should solve your error
+
+Error 2
+ModuleNotFoundError: No module named 'dateutil'
+Run the following command on my environment(VS Code) terminal:
+pip install python-dateutil
+
+Error 3
+ModuleNotFoundError: No module named 'BaseHTTPServer'
+change this to :from http.server import
+Again python version changes
+
+Error 4
+ModuleNotFoundError: No module named 'SocketServer'
+For python3 this should be written as socketserver
+
+Error 5
+AttributeError: 'generator' object has no attribute 'next'
+For python3, next is written as __next__
+
+Error 6
+_csv.Error: iterator should return strings, not bytes (the file should be opened
+ in text mode)
+To the line of code referenced in the error, change "rb" to "r" and this will solve the error.
+
+Having solved the above error, I was able to solve the errors in the server.py file
